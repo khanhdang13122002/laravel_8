@@ -14,16 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.index');
+    return view('welcome');
 });
-Route::get('/login', function () {
-    return view('frontend.login');
-})->name('login');
-Route::get('/signup', function () {
-    return view('frontend.login');
-})->name('signup');
-Route::post('signup', [\App\Http\Controllers\AuthController::class, 'signup'])->name('signup');
-Route::post('login', [\App\Http\Controllers\AuthController::class, 'login'])->name('login');
 
 Auth::routes();
 
